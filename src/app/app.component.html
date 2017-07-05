@@ -28,8 +28,8 @@
             <p *ngIf="showDetails">Details I want to show!</p>
             
             <p>Detail button clicks:</p>
-            <ul *ngFor="let detailClick of detailClicks">
-                <li [ngStyle]="{backgroundColor: detailClick >= 5 ? 'lightblue' : ''}" [ngClass]="{whiteColor: detailClick >= 5 ? true : false}">
+            <ul *ngFor="let detailClick of detailClicks; let i = index">
+                <li [ngStyle]="{backgroundColor: i >= 6 ? 'lightblue' : ''}" [ngClass]="{'white-text': i >= 6}">
                     {{detailClick}}
                 </li>
             </ul>

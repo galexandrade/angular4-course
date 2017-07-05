@@ -1,5 +1,38 @@
-<!--The whole content below can be removed with the new code.-->
-TESTE
-
-<hr>
-<app-serve></app-serve>
+<div class="container">
+    <div class="row">
+        <div class="cox-xs-12">
+            <h3>APP</h3>
+            <span class="label label-primary">by Alex P. Andrade</span>
+            <hr>
+        </div>
+        <div class="cox-xs-12">
+            <h4>Alert Components</h4>
+            <app-warning-alert></app-warning-alert>
+            <app-success-alert></app-success-alert>
+            <hr>
+        </div>
+        <div class="cox-xs-12">
+            <h4>Servers Component</h4>
+            <app-servers></app-servers>
+            <hr>
+        </div>
+        <div class="cox-xs-12">
+            <h4>Username</h4>
+            <input type="text" [(ngModel)]="username" class="form-control" placeholder="Username">
+            <p>{{username}}</p>
+            <button class="btn btn-primary" [disabled]="username === ''" (click)="username=''">Reset</button>
+        </div>
+        <div class="cox-xs-12">
+            <h4>Directives</h4>
+            <button class="btn btn-primary" (click)="onDetailClick()">Display Details</button>
+            <p *ngIf="showDetails">Details I want to show!</p>
+            
+            <p>Detail button clicks:</p>
+            <ul *ngFor="let detailClick of detailClicks">
+                <li [ngStyle]="{backgroundColor: detailClick >= 5 ? 'lightblue' : ''}" [ngClass]="{whiteColor: detailClick >= 5 ? true : false}">
+                    {{detailClick}}
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

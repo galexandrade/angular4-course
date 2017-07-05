@@ -1,0 +1,7 @@
+<button class="btn btn-warning" *ngIf="!close" (click)="close = close ? false : true">Show Warning</button>
+<div class="alert alert-warning" role="alert" *ngIf="close">
+  <button type="button" class="close" aria-label="Close" (click)="close = close ? false : true">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  <strong>Warning!</strong> Better check yourself, you're not looking too good.
+</div>

@@ -1,0 +1,7 @@
+<button class="btn btn-success" *ngIf="!close" (click)="close = close ? false : true">Show success</button>
+<div class="alert alert-success" role="alert" *ngIf="close">
+  <button type="button" class="close" aria-label="Close" (click)="close = close ? false : true">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  <strong>success!</strong> Congratulations!
+</div>
